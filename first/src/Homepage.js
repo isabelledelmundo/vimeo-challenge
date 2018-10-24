@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Vimeo from 'react-vimeo';
 import Carousel from './Carousel.js';
 import './Homepage.css';
 
@@ -7,7 +8,7 @@ class Homepage extends Component{
         return(
         <div id="homepage">
             <div id="top-container">
-            <img src="https://i.vimeocdn.com/video/590587169_530x315.jpg" className="img1" width="275" height="150"></img>
+            <Vimeo videoId={ 192590516 } autoplay={true} />
             <div className="text1">
             <h2>MONSOON III</h2>
             <p>
@@ -28,8 +29,8 @@ class Homepage extends Component{
             </p>
             
             </div>
-            <img src="https://i.vimeocdn.com/video/590587169_530x315.jpg" className="img2" width="275" height="150"></img>
-            <img src="https://i.vimeocdn.com/video/590587169_530x315.jpg" className="img3" width="275" height="150"></img>
+            <Vimeo videoId={ 191641771 } autoplay={true} />
+            <Vimeo videoId={ 146768217 } autoplay={true} />
             <div className="text3">
             
             <h2>Move 2</h2>

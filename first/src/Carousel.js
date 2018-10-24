@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Slides from './Slides.js';
 import Arrows from './Arrows.js';
 
+
 import './Carousel.css';
 
 
