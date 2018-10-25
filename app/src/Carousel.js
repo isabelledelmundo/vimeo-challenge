@@ -4,35 +4,77 @@ import LeftArr from './Arrows/LeftArr.js';
 import RightArr from './Arrows/RightArr.js';
 
 
-class Carousel extends Component {
-  constructor(props) {
-    super(props);
+export default class Slider extends Component {
+    constructor(props) {
+        super(props);
 
-    this.state = {}
+        this.state = {
+            slides: [{
+              title: 'MONSOON III',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt ipsum augue. In faucibus vehicula manga pulvinar aliquam. Cras aliquam feugiat lorem non auctor. ',
+              image: 'https://i.vimeocdn.com/video/595198868_505x160.jpg'
+            },
+            {
+              title: 'BEAMS',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt ipsum augue. In faucibus vehicula manga pulvinar aliquam. Cras aliquam feugiat lorem non auctor. ',
+              image: 'https://i.vimeocdn.com/video/589972810_530x315.jpg'
+            },
+            {
+              title: 'Move 2',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt ipsum augue. In faucibus vehicula manga pulvinar aliquam. Cras aliquam feugiat lorem non auctor. ',
+              image: 'https://i.vimeocdn.com/video/590587169_530x315.jpg'
+            }],
+            currentIndex: 0,
+            translateValue: 0
+        }
 
-    this.prevSlide = this.prevSlide.bind(this);
-    this.nextSlide = this.nextSlide.bind(this);
+        this.prevSlide = this.prevSlide.bind(this);
+        this.nextSlide = this.nextSlide.bind(this);
+        this.slideWidth = this.slideWidth.bind(this);
+    }
 
-  }
+    prevSlide(){
+      this.setState(prevState => ({
+        currentIndex: prevState.currentIndex -1 ,
+        translateValue: prevState.translateValue + (this.slideWidth())
 
-  prevSlide(){
+    }));
 
-  }
+    }
 
-  nextSlide(){
+    nextSlide(){
+        // if(this.state.currentIndex === this.state.slides.length - 1) {
+        //     return this.setState({
+        //         currentIndex: 0,
+        //         translateValue: 0
+        //     })
+        // }
 
-  }
+        this.setState(prevState => ({
+            currentIndex: prevState.currentIndex + 1,
+            translateValue: prevState.translateValue + -(this.slideWidth())
 
-  render() {
-    return (
-      <div className="carousel">
-        <Slide/>
-        
-        <LeftArr prevSlide = {this.prevSlide}/>
-        <RightArr nextSlide = {this.nextSlide}/>	
-      </div>
-    );
-  }
+        }));
+    }
+
+    slideWidth(){
+        return document.querySelector('.slide').clientWidth;
+    }
+
+    render() {
+      let currSlide = this.state.slides[this.state.currentIndex];
+
+        return (
+            <div className='slider'>
+               <Slide 
+               image={ currSlide.image }
+               title={ currSlide.title }
+               text={ currSlide.description }/>
+              
+                <LeftArr prevSlide={this.prevSlide} />
+                <RightArr nextSlide={this.nextSlide} />
+
+            </div>
+        );
+    }
 }
-
-export default Carousel;

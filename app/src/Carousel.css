@@ -1,0 +1,22 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel > .carousel-wrapper{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* transform: `translateX(${this.state.translateValue}px)`;
+    transition: 'transform ease-out 0.45s' */
+}
+
+.carousel > .carousel-wrapper > .slide{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+
+}

@@ -1,11 +1,11 @@
 import React from 'react';
 
 const RightArr = (props) => {
-  return (
-    <div className="nextArrow" onClick={props.nextSlide}>
-      <i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
-    </div>
-  );
+    return (
+        <div className='nextArrow' onClick={props.nextSlide}>
+        clickRight
+        </div>
+    );
 }
 
 export default RightArr;
