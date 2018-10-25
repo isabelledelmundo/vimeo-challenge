@@ -7,7 +7,7 @@ class MainPage extends Component{
         return(
             <div id="mainpage">
                 <div className="wrapper">
-                    <div id="top-wrapper">
+                    <div className="top-wrapper">
                     <div className="vid"><Vimeo videoId={"192590516"} autoplay={true} /></div>
                     <div className="text1">
                     <h2>MONSOON III</h2>
@@ -18,7 +18,7 @@ class MainPage extends Component{
                     </p>
                     </div>
                     </div>
-                    <div id="bottom-wrapper">
+                    <div className="bottom-wrapper">
                     <div className="left1">
                     <h2>BEAMS</h2>
                     <p>

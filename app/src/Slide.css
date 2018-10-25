@@ -34,7 +34,8 @@
     
     .slide{
 		margin: auto;
-	}
+    }
+    
 	.slide > div {
 		display: block;
 		max-width: 100%;

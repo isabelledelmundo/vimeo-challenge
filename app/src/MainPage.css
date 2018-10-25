@@ -6,7 +6,7 @@
     
 }
 
-#top-wrapper{
+.top-wrapper{
     padding: 4.7em;
     display : grid;
     grid-template-columns: repeat(2, 1fr);
@@ -14,20 +14,20 @@
     grid-template-areas: "a b";
 }
 
-#top-wrapper .text1{
+.top-wrapper .text1{
     grid-area: b;
     justify-self: start;
     width: 400px;
 }
 
-#top-wrapper .vid{
+.top-wrapper .vid{
     padding-top: 2em;
     grid-area: a;
     justify-self: end;
-    /* padding-left: 22em; */
+
 }
 
-#bottom-wrapper{
+.bottom-wrapper{
     padding: 5.7em;
     background-image: linear-gradient(#202020, #D3D3D3);
     color: white;
@@ -38,57 +38,53 @@
                     "c d";
 }
 
-#bottom-wrapper .left1{
+.bottom-wrapper .left1{
     grid-area: a;
     justify-self: end;
     text-align: right;
-    /* padding-left: 22em; */
+    width: 400px; 
+
 }
 
-#bottom-wrapper .right1{
+.bottom-wrapper .right1{
     padding-top: 1.75em;
     grid-area: b;
     justify-self: start;
+    
 
 }
-#bottom-wrapper .left2{
+.bottom-wrapper .left2{
     padding-top: 7em; 
     grid-area: c;
     justify-self: end;
-    /* padding-left: 22em; */
+
 }
-#bottom-wrapper .right2{
+.bottom-wrapper .right2{
     padding-top: 5em;
     grid-area: d;
     justify-self: start;
-    width: 400px;
     text-align: left;
-    /* padding-left: 22em; */
+    width: 400px;
 }
 
 
 @media screen and (max-width: 1000px) {
     
-	.wrapper > #top-wrapper > div {
+	.wrapper > div {
 		display: block;
-		max-width: 100%;
+        max-width: 100%;
     }
 
-    .wrapper > #bottom-wrapper > div {
-		display: block;
-		max-width: 100%;
-    }
-    
-	#top-wrapper:nth-child(odd) .vid {
+	.top-wrapper .vid {
 		float: none;
     } 
+    
+    .bottom-wrapper .right1{
+        float: none;
+    }
 
-    #bottom-wrapper:nth-child(even) .vid {
+    .bottom-wrapper .left2 {
 		float: none;
     }
     
-	#top-wrapper .vid {
-        float: none;
-		margin: 40px;
-	}
 }
