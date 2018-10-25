@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Slide from './Slide.js';
 import LeftArr from './Arrows/LeftArr.js';
 import RightArr from './Arrows/RightArr.js';
+import './Carousel.css';
 
 
 export default class Slider extends Component {
@@ -34,21 +35,28 @@ export default class Slider extends Component {
     }
 
     prevSlide(){
+      if(this.state.currentIndex === 0) {
+        return this.setState({
+            currentIndex: this.state.slides.length - 1,
+            translateValue: 0
+        })
+    }
+
       this.setState(prevState => ({
-        currentIndex: prevState.currentIndex -1 ,
-        translateValue: prevState.translateValue + (this.slideWidth())
+        currentIndex: prevState.currentIndex - 1 ,
+        translateValue: prevState.translateValue + -(this.slideWidth())
 
     }));
 
     }
 
     nextSlide(){
-        // if(this.state.currentIndex === this.state.slides.length - 1) {
-        //     return this.setState({
-        //         currentIndex: 0,
-        //         translateValue: 0
-        //     })
-        // }
+        if(this.state.currentIndex === this.state.slides.length - 1) {
+            return this.setState({
+                currentIndex: 0,
+                translateValue: 0
+            })
+        }
 
         this.setState(prevState => ({
             currentIndex: prevState.currentIndex + 1,
@@ -65,14 +73,19 @@ export default class Slider extends Component {
       let currSlide = this.state.slides[this.state.currentIndex];
 
         return (
-            <div className='slider'>
+            <div className = "carousel">
                <Slide 
-               image={ currSlide.image }
+               image = { currSlide.image }
                title={ currSlide.title }
                text={ currSlide.description }/>
               
-                <LeftArr prevSlide={this.prevSlide} />
-                <RightArr nextSlide={this.nextSlide} />
+              <div className = "arrows">
+              <div className="prevArrow" onClick={this.prevSlide}><h2>&lt;</h2></div>
+              <div className="nextArrow" onClick={this.nextSlide}><h2>&gt;</h2></div>
+              </div>
+              
+             
+                
 
             </div>
         );
