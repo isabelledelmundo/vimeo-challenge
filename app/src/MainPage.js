@@ -8,7 +8,7 @@ class MainPage extends Component{
             <div id="mainpage">
                 <div className="wrapper">
                     <div id="top-wrapper">
-                    <div className="vid"><Vimeo videoId={ 192590516 } autoplay={true} /></div>
+                    <div className="vid"><Vimeo videoId={"192590516"} autoplay={true} /></div>
                     <div className="text1">
                     <h2>MONSOON III</h2>
                     <p>
@@ -28,8 +28,8 @@ class MainPage extends Component{
                     Quisque sed lorem egestas mauris venenatis commondo eu id nibh. Ut porta libero sed semper faubicus.
                     </p>
                     </div>
-                    <div className="right1"><Vimeo videoId={ 191641771 } autoplay={true} /></div>
-                    <div className="left2"><Vimeo videoId={ 146768217 } autoplay={true} /></div>
+                    <div className="right1"><Vimeo videoId={ "191641771" } autoplay={true} /></div>
+                    <div className="left2"><Vimeo videoId={ "146768217" } autoplay={true} /></div>
                     <div className="right2">
                     <h2>Move 2</h2>
                     <p>

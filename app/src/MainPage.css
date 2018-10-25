@@ -94,7 +94,7 @@
 		max-width: 100%;
     }
     
-	#top-wrapper:nth-child(even) .vid {
+	#top-wrapper:nth-child(odd) .vid {
 		float: none;
     } 
 

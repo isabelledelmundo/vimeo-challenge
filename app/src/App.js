@@ -10,12 +10,20 @@ class App extends Component {
     this.state = {
       isCarousel: false
     }
+
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick(){
+    this.setState({isCarousel: !this.state.isCarousel});
+    console.log("im clicking");
   }
 
   render() {
     if(this.state.isCarousel === false){
       return (
         <div className="App">
+        <button className="btn" onClick={this.onClick}>Carousel</button>
           <MainPage/>
         </div>
       );
@@ -24,7 +32,9 @@ class App extends Component {
     else{ 
       return (
         <div className="App">
-          <Carousel/>
+        <button className="btn" onClick={this.onClick}>Main Page</button>
+        <div><p>whats up</p></div>
+          {/* <Carousel/> */}
         </div>
       );
 
