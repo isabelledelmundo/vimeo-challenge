@@ -1,10 +1,27 @@
 import React, { Component } from 'react';
-import Slides from './Slides.js';
-import Arrows from './Arrows.js';
 
 
 import './Carousel.css';
 
+const data =  [
+  {
+    videoId: 'monsooniii',
+    title: 'MONSOON III',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt ipsum augue. In faucibus vehicula magna pulvinar aliquam. Cras aliquam feugiat lorem non auctor. Quisque sed lorem egestas mauris venenatis commodo eu id nibh. Ut porta libero sed semper faucibus.',
+    image: 'https://i.vimeocdn.com/video/595198868_505x160.jpg'
+  },
+  {
+    keyword: 'beams',
+    title: 'BEAMS',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt ipsum augue. In faucibus vehicula magna pulvinar aliquam. Cras aliquam feugiat lorem non auctor. Quisque sed lorem egestas mauris venenatis commodo eu id nibh. Ut porta libero sed semper faucibus.',
+    image: 'https://i.vimeocdn.com/video/589972810_530x315.jpg'
+  },
+  {
+    keyword: 'move2',
+    title: 'Move 2',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt ipsum augue. In faucibus vehicula magna pulvinar aliquam. Cras aliquam feugiat lorem non auctor. Quisque sed lorem egestas mauris venenatis commodo eu id nibh. Ut porta libero sed semper faucibus.',
+    image: 'https://i.vimeocdn.com/video/590587169_530x315.jpg'
+  }]
 
 class Carousel extends Component {
     constructor (props) {
@@ -49,18 +66,6 @@ class Carousel extends Component {
     return (
       <div className="carousel">
 
-      <Arrows
-          direction="left"
-          clickFunction={ this.prevSlide }
-          glyph="&#9664;" />
-
-        <Slides url={this.state.imgUrls[this.state.currentImageIndex]} />
-
-        <Arrows
-          direction="right"
-          clickFunction={ this.nextSlide}
-          glyph="&#9654;" />
-				
       </div>
     );
   }
