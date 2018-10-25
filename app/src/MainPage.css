@@ -67,14 +67,7 @@
 }
 
 
-
-
 @media screen and (max-width: 1000px) {
-	/* .wrapper > .topWrapp {
-		padding-left: 0;
-		width: 80%;
-		margin: auto;
-    } */
     
 	.wrapper > #top-wrapper > div {
 		display: block;

@@ -34,7 +34,7 @@ class App extends Component {
         <div className="App">
         <button className="btn" onClick={this.onClick}>Main Page</button>
         <div><p>whats up</p></div>
-          {/* <Carousel/> */}
+          <Carousel/>
         </div>
       );
 
