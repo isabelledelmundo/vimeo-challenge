@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Slide from './Slide.js';
-import LeftArr from './Arrows/LeftArr.js';
-import RightArr from './Arrows/RightArr.js';
 import './Carousel.css';
 
 
@@ -74,19 +72,9 @@ export default class Slider extends Component {
 
         return (
             <div className = "carousel">
-               <Slide 
-               image = { currSlide.image }
-               title={ currSlide.title }
-               text={ currSlide.description }/>
-              
-              <div className = "arrows">
-              <div className="prevArrow" onClick={this.prevSlide}><h2>&lt;</h2></div>
-              <div className="nextArrow" onClick={this.nextSlide}><h2>&gt;</h2></div>
-              </div>
-              
-             
-                
-
+              <div className='arr leftArr' onClick={this.prevSlide}><h2>&lt;</h2></div>
+              <div className='slide'><Slide image = {currSlide.image} title={currSlide.title} text={currSlide.text}/></div>
+              <div className='arr rightArr' onClick={this.nextSlide}><h2>&gt;</h2></div>
             </div>
         );
     }

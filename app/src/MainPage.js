@@ -18,7 +18,6 @@ class MainPage extends Component{
                     </p>
                     </div>
                     </div>
-
                     <div id="bottom-wrapper">
                     <div className="left1">
                     <h2>BEAMS</h2>

@@ -16,7 +16,7 @@ class App extends Component {
 
   onClick(){
     this.setState({isCarousel: !this.state.isCarousel});
-    console.log("im clicking");
+    
   }
 
   render() {

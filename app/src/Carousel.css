@@ -1,21 +1,29 @@
-.carousel {
-    width: 100vw;
-	height: 100vh;
-	overflow-y: hidden;
+.carousel{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "a b c";
 }
-
-
-
-.arrows{
+    
+.arr{
     /* top: 45vh; */
-	width: 80px;
-	height: 80px;
+    /* text-align: center; */
+	/* width: 80px;
+	height: 80px; */
 	color: #1E90FF;
-    text-align: center;
-	opacity: 0.6;
-	transition: 0.2s;
+	opacity: 0.5;
 }
 
-.arrows > .nextArrow {
-	right: 5vw;
+.arr.rightArr{
+    grid-area: c;
+    justify-self: end;
+    padding-right: 2em;
+    padding-top: 50%;
+}
+
+.arr.leftArr{
+    grid-area: a;
+    justify-self: start;
+    padding-left: 2em;
+    padding-top: 50%;
 }
